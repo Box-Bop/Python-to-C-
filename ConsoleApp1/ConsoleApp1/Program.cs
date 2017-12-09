@@ -26,7 +26,7 @@ namespace ConsoleApp1
                 Console.WriteLine(i);
             }
 
-            Console.ReadLine();
+
             string filePath = Directory.GetCurrentDirectory();
             Console.WriteLine("Sisestage fail'i nimi (kttekst.txt) : ");
             string fileName = Console.ReadLine();
