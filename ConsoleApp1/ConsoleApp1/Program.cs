@@ -11,32 +11,25 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string fileName = Directory.GetCurrentDirectory();
-            StreamReader sr = new StreamReader(fileName);
+            string filePath = Directory.GetCurrentDirectory();
+            Console.WriteLine("Sisestage fail'i nimi (kttekst.txt) : ");
+            string fileName = Console.ReadLine();
+            string fullPath = filePath + "\\" + fileName;
 
             int counter = 0;
             int five = 0;
-            string delim = " ";
-            string[] fields = null;
-            string line = null;
 
-            while (!sr.EndOfStream)
-            {
-                counter += fields.Length;
-            }
-            Console.WriteLine("Failis " + fileName + " on kokku: {0} sõnu.", counter);
-
-            string path = Path.Combine(Environment.CurrentDirectory, fileName);
-
-            string[] words = File.ReadAllText(path).Split(' ');
+            string[] words = File.ReadAllText(fullPath).Split(' ');
             foreach (string word in words)
             {
                 if (word.Length <= 4)
                 {
                     five += 1;
                 }
-
+                counter += 1;
             }
+
+            Console.WriteLine("Failis " + fileName + " on kokku: {0} sõnu.", counter);
             Console.WriteLine("Nendest {0} on väiksemad kui 5 tähte.",five);
 
             Console.ReadLine();
