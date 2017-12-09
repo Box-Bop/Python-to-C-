@@ -11,6 +11,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            string fileName = Directory.GetCurrentDirectory();
             StreamReader sr = new StreamReader(fileName);
 
             int counter = 0;
