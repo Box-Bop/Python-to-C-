@@ -24,6 +24,16 @@ namespace ConsoleApp1
                     }
                 }
             }
+
+            double avg1 = nums1.Average();
+            double avg2 = nums2.Average();
+
+            double avg3 = (nums1.Sum() + nums2.Sum()) / (nums1.Length + nums2.Length);
+
+            Console.WriteLine("Esimese list'i keskmine on: " + avg1);
+            Console.WriteLine("Teise list'i keskmine on: " + avg2);
+            Console.WriteLine("Mõlema list'ide keskmine on: " + avg3);
+
             Console.ReadLine();
         }
     }
